@@ -1,5 +1,10 @@
 # [apint.io](https://apint.io)
 
+Domain: https://apint.io  
+Git Static Code: https://github.com/EloiStree/apint.io
+Git Page: https://eloistree.github.io/apint.io
+
+
 ![image](https://github.com/user-attachments/assets/6cc6ee53-4a41-4681-98df-1f63dde486a2)
 
 My name is Éloi Strée, and I’m a Belgian developer working on integer-based tools designed to enable remote control functionality for gaming, QA testing, and "integer massive multiplayer games." Inspired deeply by the Twitch Plays Pokémon phenomenon, creating a game of that nature is a personal dream of mine.
