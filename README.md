@@ -8,7 +8,7 @@ Git Page: https://eloistree.github.io/apint.io
 
 # About 
 
-![image](https://github.com/user-attachments/assets/6cc6ee53-4a41-4681-98df-1f63dde486a2)
+[![image](https://github.com/user-attachments/assets/7ac2569a-7018-4d98-be9a-2f9eeffdfd9c)](https://github.com/EloiStree/License)  
 
 My name is Éloi Strée, and I’m a Belgian developer working on integer-based tools designed to enable remote control functionality for gaming, QA testing, and "integer massive multiplayer games." Inspired deeply by the Twitch Plays Pokémon phenomenon, creating a game of that nature is a personal dream of mine.
 
@@ -23,7 +23,6 @@ If you’re a fan of IFTTT, I’d love your help in building what I have in mind
 In short: let’s see what I can build!
 
 Have a nice day, may the code be with you.
-[![image](https://github.com/user-attachments/assets/7ac2569a-7018-4d98-be9a-2f9eeffdfd9c)](https://github.com/EloiStree/License)
 
 
 
