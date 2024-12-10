@@ -4,6 +4,9 @@ Domain: https://apint.io
 Git Static Code: https://github.com/EloiStree/apint.io  
 Git Page: https://eloistree.github.io/apint.io  
 
+Reddit: https://www.reddit.com/r/apint
+Discord: https://discord.gg/ZAUkBUF8ak
+
 --------------------
 
 # About 
