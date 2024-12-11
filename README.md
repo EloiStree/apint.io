@@ -51,6 +51,8 @@ Below are examples of bot code designed to run on a Raspberry Pi 5:
 - **Twitch Bot**: [GitHub Repository](https://github.com/EloiStree/2024_12_11_HelloMegaMaskTwitchBot)  
 - **Discord Bot**: [GitHub Repository](https://github.com/EloiStree/2024_12_07_HelloMegaMaskDiscordBot)
 
+Learn about how to install some of the tools on your Pi:  
+[https://github.com/EloiStree/2024_12_05_RaspberryPiGate](https://github.com/EloiStree/2024_12_05_RaspberryPiGate)
 
  -------------------------------
 
