@@ -37,3 +37,40 @@ Below are examples of bot code designed to run on a Raspberry Pi 5:
 - **Twitch Bot**: [GitHub Repository](https://github.com/EloiStree/2024_12_11_HelloMegaMaskTwitchBot)  
 - **Discord Bot**: [GitHub Repository](https://github.com/EloiStree/2024_12_07_HelloMegaMaskDiscordBot)
 
+
+ -------------------------------
+
+# Warning Agreement
+
+## I store the authentication information in a public Git repository  
+
+**Warning:** I cannot guarantee the privacy and security of your data.  
+I lack the competence and expertise to ensure this.
+
+When you link a MetaMask public address with a platform, it is stored in this public Git repository:  
+- [https://github.com/EloiStree/MetaMaskUsersAPIntIo](https://github.com/EloiStree/MetaMaskUsersAPIntIo)  
+
+The data is then placed in a database in this exact format to make it easier to access.  
+This is the only data related to your identity that I store.
+
+We cannot remove data from a Git project (or prevent leaks of a database in the case of a private company).  
+If you don't want your Twitch account to be linked to your Discord account through a unique ID in the database,  
+please minimize your use of the service or refrain from using it altogether.
+
+
+
+## DDoS, Hackers, Trolls, and Stability  
+
+I am just a small game developer, and I don't plan to grow this project to a level where I can guarantee its operability 24/7.  
+- It is likely to go down due to DDoS attacks.  
+- It may be hacked by people who dislike the project, the use of the tool, or me.  
+- It will probably be trolled by the Twitch community 😋.  
+- It might crash because I am not great at my job.  
+- It is going to be down when we do some stress test with thousands of player
+
+I will do my best, but please do not consider this project to be stable.  
+
+
+
+
+
