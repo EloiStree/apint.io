@@ -30,3 +30,10 @@ Have a nice day, may the code be with you.
 
 
 
+# Cross-Platform Interaction
+
+APIntIO serves as a cross-platform API, designed with a MetaMask-signed and verified concept. 
+Below are examples of bot code designed to run on a Raspberry Pi 5:
+- **Twitch Bot**: [GitHub Repository](https://github.com/EloiStree/2024_12_11_HelloMegaMaskTwitchBot)  
+- **Discord Bot**: [GitHub Repository](https://github.com/EloiStree/2024_12_07_HelloMegaMaskDiscordBot)
+
