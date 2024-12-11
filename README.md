@@ -7,6 +7,15 @@ Git Page: https://eloistree.github.io/apint.io
 Reddit: https://www.reddit.com/r/apint   
 Discord: https://discord.gg/ZAUkBUF8ak  
 
+Pi Hosting Server:
+`194.8.253.226`
+
+Home Server:
+https://apint.ddns.net
+
+Discord Bot:
+- Twitch Play on Discord: [Conferance](https://discord.gg/Tr8EvjpVCC) [Chat Only](https://discord.gg/YDYqKKwXAt)
+- Twitch Play on Twitch: [Live](https://www.twitch.tv/eloiteaching) [Chat](https://www.twitch.tv/popout/eloiteaching/chat?popout=)
 --------------------
 
 # About 
