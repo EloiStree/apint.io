@@ -1,7 +1,7 @@
 # [https://apint.io](https://apint.io)
 
 
-_I love this name because it reminds me why I created this project:_  
+I love this name because it reminds me why I created this project:  
 _Have an API that takes an integer as input output and operates under a beerware license philosophy._  
 
 
