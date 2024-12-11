@@ -1,16 +1,18 @@
 # [https://apint.io](https://apint.io)
 
-Domain: https://apint.io    
-Git Static Code: https://github.com/EloiStree/apint.io  
-Git Page: https://eloistree.github.io/apint.io  
+**Git**
+Code: https://github.com/EloiStree/apint.io    
+Page: https://eloistree.github.io/apint.io    
 
+**Support**
 Reddit: https://www.reddit.com/r/apint   
 Discord: https://discord.gg/ZAUkBUF8ak  
 
-Pi Hosting Server: [https://194.8.253.226](https://194.8.253.226)
-Home Server:[https://apint.ddns.net](https://apint.ddns.net)
+**Server**
+Pi Hosting Server: https://194.8.253.226 [https://apint.io](https://apint.io)  
+Home Server:[https://apint.ddns.net](https://apint.ddns.net)  
 
-Chat(s) Bot:
+**Chat(s) Bot:**
 - Twitch Play on Discord: [Conferance](https://discord.gg/Tr8EvjpVCC) [Chat Only](https://discord.gg/YDYqKKwXAt)
 - Twitch Play on Twitch: [Live](https://www.twitch.tv/eloiteaching) [Chat](https://www.twitch.tv/popout/eloiteaching/chat?popout=)
 --------------------
