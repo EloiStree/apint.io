@@ -90,3 +90,28 @@ I will do my best, but please do not consider this project to be stable.
 
 
 
+--------------------------
+
+
+# Stream Game IP
+
+APInt.io is the "stable" shared server part of the project based on integers and hosted on a Raspberry Pi.   
+The gaming and development code are on my computer. You can find them with the DDNS.  
+
+Here is an example in Python to recover the IP:
+```python
+import socket
+
+def get_ip_from_hostname(hostname):
+    try:
+        return socket.gethostbyname(hostname)
+    except socket.gaierror:
+        return None
+
+hostname = "apint.ddns.net"
+ip_address = get_ip_from_hostname(hostname)
+if ip_address is not None:
+    print(f"Recovered address: {ip_address}")
+else:
+    print(f"Failed to get IP for hostname: {hostname}")
+```
