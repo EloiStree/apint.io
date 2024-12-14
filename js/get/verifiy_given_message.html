@@ -1,0 +1,72 @@
+
+<!-- file:///C:/WWW/APINTIO/js/get/sign_message_with_private_key.html?q=0xf80ce241657b57c495133bde43d281869ab1d08f9e4c28d2c8e17ed1c9283da7|EloiTeaching 
+
+Example result: 
+?q=EloiTeaching|0xA3398ad7fB6aE44a542629De9d4426acfb4daE07|0x96f873575cc7a425b44035d0cd09313f092005d9c312b6405d58ad2d29cf398200bd76fdba9da2de86cbad99993292fbc2b1e731a14735f62a6e710149bfdb0b1b
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Message with Web3</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #00FF00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        #error {
+            color: red;
+        }  
+    </style>
+</head>
+<body>
+    <script>
+        (async function() {
+            // Parse the query parameter `q`
+            const urlParams = new URLSearchParams(window.location.search);
+            const qParam = urlParams.get('q');
+
+            if (!qParam) {
+                document.getElementById('error').textContent = "Missing ?q= query parameter.";
+                return;
+            }
+
+            try {
+                const web3 = new Web3();
+                //EloiTeaching|0xA3398ad7fB6aE44a542629De9d4426acfb4daE07|0x96f873575cc7a425b44035d0cd09313f092005d9c312b6405d58ad2d29cf398200bd76fdba9da2de86cbad99993292fbc2b1e731a14735f62a6e710149bfdb0b1b
+                const [message_to_sign, public_address, signed_message] = qParam.split('|'); 
+                
+                const recoveredAddress = web3.eth.accounts.recover(message_to_sign, signed_message);
+
+                if (recoveredAddress.toLowerCase() === public_address.toLowerCase()) {
+                    document.body.innerText = 'VALIDE:TRUE'
+                    + '\n' + 'MESSAGE:' + message_to_sign
+                    + '\n' + 'PUBLIC_ADDRESS:' + public_address
+                    + '\n' + 'SIGNED_MESSAGE:' + signed_message
+                    + '\n' + 'RECOVERED_ADDRESS:' + recoveredAddress
+                    +" \n "
+                    ;
+                } else {
+                    document.body.innerText = 'VALIDE:FALSE';
+                }
+            } catch (error) {
+                document.body.innerText = 'ERROR:' + error.message;
+            }
+        })();
+    </script>
+</body>
+</html>

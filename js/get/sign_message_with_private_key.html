@@ -1,0 +1,72 @@
+
+<!-- file:///C:/WWW/APINTIO/js/get/sign_message_with_private_key.html?q=0xf80ce241657b57c495133bde43d281869ab1d08f9e4c28d2c8e17ed1c9283da7|EloiTeaching 
+
+Example result: 
+EloiTeaching|0xA3398ad7fB6aE44a542629De9d4426acfb4daE07|0x96f873575cc7a425b44035d0cd09313f092005d9c312b6405d58ad2d29cf398200bd76fdba9da2de86cbad99993292fbc2b1e731a14735f62a6e710149bfdb0b1b
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Message with Web3</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+
+    
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #00FF00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        #error {
+            color: red;
+        }  
+    </style>
+</head>
+<body>
+    <script>
+        (async function() {
+            // Parse the query parameter `q`
+            const urlParams = new URLSearchParams(window.location.search);
+            const qParam = urlParams.get('q');
+
+            if (!qParam) {
+                document.getElementById('error').textContent = "Missing ?q= query parameter.";
+                return;
+            }
+
+            try {
+                // Extract the private key and message to sign from the query
+                const [privateKey, message_to_sign] = qParam.split('|');
+                if (!privateKey || !message_to_sign) {
+                    document.getElementById('error').textContent = "Invalid format. Expected format is: ?q=<privateKey>|<MessageToSign>";
+                    return;
+                }
+
+                const web3 = new Web3();
+                const account = web3.eth.accounts.privateKeyToAccount(privateKey);
+                const public_key = account.address;
+
+                // Sign the message with the private key
+                const signature = await web3.eth.accounts.sign(message_to_sign, privateKey);
+                document.body.innerText = message_to_sign+"|"+public_key+"|"+ signature.signature;
+
+                // Display the signature
+            } catch (error) {
+                document.body.innerText = 'ERROR:' + error.message;
+            }
+        })();
+    </script>
+</body>
+</html>

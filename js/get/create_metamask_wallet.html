@@ -1,0 +1,43 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create MetaMask Wallet</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+    
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #00FF00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        #error {
+            color: red;
+        }  
+    </style>
+</head>
+<body>
+    <script>
+        const web3 = new Web3();
+        const account = web3.eth.accounts.create();
+        const body = document.querySelector('body');        
+        body.innerText = 'ADDRESS:' + account.address + '\n' + 'PRIVATE_KEY:' + account.privateKey;
+    </script>
+</body>
+</html>

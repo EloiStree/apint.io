@@ -1,5 +1,53 @@
 
 
-By create, MetaMask wallet, I means a compatible with MetaMask.  
-**/!\ WARNING: It is not recommended to create your wallet here. /!\**  
-However, if you need to create a MetaMask-compatible wallet for any reason (e.g., as a temporary key or a buffer key), you can do so here. Below, I will provide JavaScript code that generates a random wallet, which can be imported into MetaMask.  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create MetaMask Wallet</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+<body>
+    <div>
+
+        <h1>Create Ethereum Wallet</h1>
+        <p id="walletDetails"></p>
+        
+        <script>
+        window.addEventListener('load', () => {
+            const web3 = new Web3();
+            const account = web3.eth.accounts.create();
+            document.getElementById('address').innerText = account.address;
+            document.getElementById('privateKey').innerText = account.privateKey;
+            document.getElementById('ethscan').href = `https://etherscan.io/address/${account.address}`;
+            document.getElementById('ethscan').innerText = `https://etherscan.io/address/${account.address}`;
+            document.getElementById('qrCode').src = `https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=${account.privateKey}`;
+                  
+        });
+        </script>
+
+        <p>
+            Address: <span id="address"></span><br>
+            Private Key: <span id="privateKey"></span><br>
+            Public Key: <span id="publicKey"></span><br>
+            Ethscan: <a href="" id="ethscan"></a><br>
+            <img src="" id="qrCode" alt="QR Code"><br>
+        </p>
+    </div>
+
+
+    <div>
+
+        <h2>Explanation</h2>
+        <p>
+            By create, MetaMask wallet, I means a compatible with MetaMask. <br\> 
+            **/!\ WARNING: It is not recommended to create your wallet here. /!\**<br\>  
+            However, if you need to create a MetaMask-compatible wallet for any reason (e.g., as a temporary key or a buffer key), you can do so here.<br\>
+            Below, I will provide JavaScript code that generates a random wallet, which can be imported into MetaMask.  <br\>
+        </p>
+    </div>
+</body>
+</html>
