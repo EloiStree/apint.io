@@ -114,4 +114,25 @@ if ip_address is not None:
     print(f"Recovered address: {ip_address}")
 else:
     print(f"Failed to get IP for hostname: {hostname}")
+
 ```
+
+
+
+# Git Page JS HTML API
+
+Small code to have some GET static page unsecure but availaible.
+
+- Create ETH Private key:
+  - Code: https://github.com/EloiStree/apint.io/blob/main/js/get/create_metamask_wallet.html
+  - Example: http://eloistree.github.io/apint.io/js/get/create_metamask_wallet.html 
+- Sign messsage with private key:
+  - Code: https://github.com/EloiStree/apint.io/blob/main/js/get/sign_message_with_private_key.html 
+  - Example: http://eloistree.github.io/apint.io/js/get/sign_message_with_private_key.html?q=0xf80ce241657b57c495133bde43d281869ab1d08f9e4c28d2c8e17ed1c9283da7|EloiTeaching 
+- Verify message
+  - Code: https://github.com/EloiStree/apint.io/blob/main/js/get/verifiy_given_message.html 
+  - Example: http://eloistree.github.io/apint.io/js/get/verifiy_given_message.html?q=EloiTeaching|0xA3398ad7fB6aE44a542629De9d4426acfb4daE07|0x96f873575cc7a425b44035d0cd09313f092005d9c312b6405d58ad2d29cf398200bd76fdba9da2de86cbad99993292fbc2b1e731a14735f62a6e710149bfdb0b1b 
+
+
+
+
