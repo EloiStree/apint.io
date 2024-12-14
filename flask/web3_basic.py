@@ -1,5 +1,21 @@
 # pip install apscheduler
 
+# Note: Steam downloads a game at home at 70Mbps
+# 8750000 bits per second
+# 8750000/8 = 1093750 bytes per second
+# integer command is 4-12 bytes
+# You can receive in theory 1093750/4 
+# 273437 integer commands per second
+# In the best world where you don't have 
+# lag, bandwidth limitation, CPU limitation,
+# Not counting the heavy REST format in the gate that relays the 12 bytes
+# Not counting print execution when forgetting to mute.
+# and the header size of UDP.
+# All that to say, you need to manage the community spam and game design
+# If you do an integer game with this tool.
+# -> And, use Webscoket for real time action.<-
+
+
 
 import socket
 import struct
