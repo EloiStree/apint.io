@@ -45,23 +45,20 @@ EloiTeaching|0xA3398ad7fB6aE44a542629De9d4426acfb4daE07|0x96f873575cc7a425b44035
                 document.getElementById('error').textContent = "Missing ?q= query parameter.";
                 return;
             }
-
             try {
-                // Extract the private key and message to sign from the query
-                const [privateKey, message_to_sign] = qParam.split('|');
+                const array = qParam.split('|');
+                const privateKey = array[0];
+                let message_to_sign = array.length > 1 ? array[1] : crypto.randomUUID();
                 if (!privateKey || !message_to_sign) {
                     document.getElementById('error').textContent = "Invalid format. Expected format is: ?q=<privateKey>|<MessageToSign>";
                     return;
                 }
-
                 const web3 = new Web3();
                 const account = web3.eth.accounts.privateKeyToAccount(privateKey);
                 const public_key = account.address;
-
                 // Sign the message with the private key
                 const signature = await web3.eth.accounts.sign(message_to_sign, privateKey);
                 document.body.innerText = message_to_sign+"|"+public_key+"|"+ signature.signature;
-
                 // Display the signature
             } catch (error) {
                 document.body.innerText = 'ERROR:' + error.message;
