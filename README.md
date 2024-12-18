@@ -41,9 +41,6 @@ In short: let’s see what I can build!
 
 Have a nice day, may the code be with you.
 
-
-
-
 # Cross-Platform Interaction
 
 APIntIO serves as a cross-platform API, designed with a MetaMask-signed and verified concept. 
