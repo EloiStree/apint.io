@@ -15,7 +15,7 @@ Reddit: https://www.reddit.com/r/apint
 Discord: https://discord.gg/ZAUkBUF8ak  
 
 **Server**
-Pi Hosting Server: https://194.8.253.226 [https://apint.io](https://apint.io)  
+Pi Hosting Server: https://193.150.14.47 [https://apint.io](https://apint.io)  
 Home Server:[https://apint.ddns.net](https://apint.ddns.net)  
 
 **Chat(s) Bot:**
