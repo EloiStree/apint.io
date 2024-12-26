@@ -22,8 +22,7 @@ Home Server:[https://apint.ddns.net](https://apint.ddns.net)
 - Twitch Play on Discord: [Conferance](https://discord.gg/Tr8EvjpVCC) [Chat Only](https://discord.gg/YDYqKKwXAt)
 - Twitch Play on Twitch: [Live](https://www.twitch.tv/eloiteaching) [Chat](https://www.twitch.tv/popout/eloiteaching/chat?popout=)
 
-**Support the project **:
-
+**Support the project**:
 You can support the project by making donation and by claiming integer key spot.
 - https://buymeacoffee.com/apintio
 
