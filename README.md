@@ -26,6 +26,7 @@ Home Server:[https://apint.ddns.net](https://apint.ddns.net)
 You can support the project by making donation and by claiming integer key spot.
 - https://buymeacoffee.com/apintio
 
+[![bmc_qr](https://github.com/user-attachments/assets/f3a59ae7-78fc-4c48-8985-773352c8b10c)](https://buymeacoffee.com/apintio)
 
 --------------------
 
