@@ -149,3 +149,10 @@ Small code to have some GET static page unsecure but availaible.
 
 
 
+## DDNS
+
+- apint-gaming.ddns.net Server design for Twitch Play 
+- apint-home.ddns.net Server at home for testing 
+- apint-iot.ddns.net Server with high kick restiction for iot remote control
+- apint.ddns.net Default DDNS
+- apintio.ddns.net Default DDNS.
