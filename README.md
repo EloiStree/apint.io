@@ -21,7 +21,8 @@ Discord: https://discord.gg/ZAUkBUF8ak
 
 **Server**
 Pi Hosting Server: https://193.150.14.47 [https://apint.io](https://apint.io)  
-Home Server:[https://apint.ddns.net](https://apint.ddns.net)  
+Pi Hosted Server:[https://apint.ddns.net](https://apint.ddns.net)  
+Pi Home Server:[https://apint-home.ddns.net](https://apint-home.ddns.net)  
 
 **Chat(s) Bot:**
 - Twitch Play on Discord: [Conferance](https://discord.gg/Tr8EvjpVCC) [Chat Only](https://discord.gg/YDYqKKwXAt)
