@@ -1,3 +1,8 @@
+IID & 🍺.io: https://buymeacoffee.com/apintio - https://github.com/EloiStree/IID - https://github.com/EloiStree/apint.io
+
+--------------------------------------
+
+
 # [https://apint.io](https://apint.io)
 
 
@@ -15,12 +20,23 @@ Reddit: https://www.reddit.com/r/apint
 Discord: https://discord.gg/ZAUkBUF8ak  
 
 **Server**
-Pi Hosting Server: https://194.8.253.226 [https://apint.io](https://apint.io)  
-Home Server:[https://apint.ddns.net](https://apint.ddns.net)  
+Pi Hosting Server: https://193.150.14.47 [https://apint.io](https://apint.io)  
+Pi Hosted Server:[https://apint.ddns.net](https://apint.ddns.net)  
+Pi Home Server:[https://apint-home.ddns.net](https://apint-home.ddns.net)  
 
 **Chat(s) Bot:**
 - Twitch Play on Discord: [Conferance](https://discord.gg/Tr8EvjpVCC) [Chat Only](https://discord.gg/YDYqKKwXAt)
 - Twitch Play on Twitch: [Live](https://www.twitch.tv/eloiteaching) [Chat](https://www.twitch.tv/popout/eloiteaching/chat?popout=)
+
+**Support the project**:
+You can support the project by making donation and by claiming integer key spot.
+- https://buymeacoffee.com/apintio
+
+<a href="https://buymeacoffee.com/apintio" >
+  <img style="width: 126px; height: auto;" src="https://github.com/user-attachments/assets/f3a59ae7-78fc-4c48-8985-773352c8b10c" alt="Support me on Buy Me a Coffee"/>
+</a>
+
+
 --------------------
 
 # About 
@@ -41,9 +57,6 @@ In short: let’s see what I can build!
 
 Have a nice day, may the code be with you.
 
-
-
-
 # Cross-Platform Interaction
 
 APIntIO serves as a cross-platform API, designed with a MetaMask-signed and verified concept. 
@@ -63,15 +76,15 @@ Learn about how to install some of the tools on your Pi:
 **Warning:** I cannot guarantee the privacy and security of your data.  
 I lack the competence and expertise to ensure this.
 
-When you link a MetaMask public address with a platform, it is stored in this public Git repository:  
-- [https://github.com/EloiStree/MetaMaskUsersAPIntIo](https://github.com/EloiStree/MetaMaskUsersAPIntIo)  
+When you link a MetaMask public address with a platform, it is stored in a public Git repository:  
 
 The data is then placed in a database in this exact format to make it easier to access.  
-This is the only data related to your identity that I store.
+those MetaMask to social link you give me is the only data related to your identity that I store.
 
-We cannot remove data from a Git project (or prevent leaks of a database in the case of a private company).  
-If you don't want your Twitch account to be linked to your Discord account through a unique ID in the database,  
-please minimize your use of the service or refrain from using it altogether.
+We cannot remove data from a Git project (or prevent leaks of a database).
+The server and host are meant to help beginners.
+
+If you want to stay on a private policy system, you can learn to host a Pi server with my code or host a Linux server on AWS/Azure.
 
 
 
@@ -85,10 +98,6 @@ I am just a small game developer, and I don't plan to grow this project to a lev
 - It is going to be down when we do some stress test with thousands of player
 
 I will do my best, but please do not consider this project to be stable.  
-
-
-
-
 
 --------------------------
 
@@ -136,3 +145,13 @@ Small code to have some GET static page unsecure but availaible.
 
 
 
+## DDNS
+
+_When I am going to have the budget for multiple server_
+_For now, all redirect to home and a Pi5
+- `apint-gaming.ddns.net` Server design for Twitch Play 
+- `apint-home.ddns.net` Server at home for testing 
+- `apint-iot.ddns.net` Server with high kick restiction for iot remote control
+- `apint.ddns.net` Default DDNS
+- `apintio.ddns.net` Default DDNS.
+- `apint.io` The static website.
