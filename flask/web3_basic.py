@@ -1,3 +1,10 @@
+# WITHOUT CERTBOT SSL
+# ONLY WORK IN HTTP ON LOCAL COMPUTER OF OUTSIDE OF BROWSER.
+
+
+
+
+
 # pip install apscheduler --break-system-packages
 # pip install flask --break-system-packages
 # Note: Steam downloads a game at home at 70Mbps
@@ -14,8 +21,6 @@
 # All that to say, you need to manage the community spam and game design
 # If you do an integer game with this tool.
 # -> And, use Webscoket for real time action.<-
-
-
 
 # sudo nano /lib/systemd/system/apintio_flask_api.service
 """
