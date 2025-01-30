@@ -1,5 +1,5 @@
-# pip install apscheduler
-
+# pip install apscheduler --break-system-packages
+# pip install flask --break-system-packages
 # Note: Steam downloads a game at home at 70Mbps
 # 8750000 bits per second
 # 8750000/8 = 1093750 bytes per second
@@ -17,6 +17,65 @@
 
 
 
+# sudo nano /lib/systemd/system/apintio_flask_api.service
+"""
+[Unit]
+Description=Flask API Auth
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /git/apintio/flask/web3_basic.py
+Restart=always
+User=root
+WorkingDirectory=/git/apintio/flask/
+
+[Install]
+WantedBy=multi-user.target
+"""
+#1h
+# sudo nano /etc/systemd/system/apintio_flask_api.timer
+"""
+[Unit]
+Description=API Flask Timer
+
+[Timer]
+OnBootSec=0min
+OnUnitActiveSec=1800s
+
+[Install]
+WantedBy=timers.target
+"""
+
+
+# Learn: https://youtu.be/nvx9jJhSELQ?t=368
+"""
+# cd /lib/systemd/system/
+# sudo systemctl daemon-reload
+# sudo systemctl enable apintio_flask_api.service
+# chmod +x /git/apintio/flask/web3_basic.py
+# sudo systemctl enable apintio_flask_api.service
+# sudo systemctl start apintio_flask_api.service
+# sudo systemctl enable apintio_flask_api.timer
+# sudo systemctl start apintio_flask_api.timer
+# sudo systemctl status apintio_flask_api.service
+# sudo systemctl stop apintio_flask_api.service
+# sudo systemctl restart apintio_flask_api.service
+# 
+sudo systemctl list-timers | grep apintio_flask_api
+
+
+
+sudo systemctl stop apintio_flask_api.service
+sudo systemctl stop apintio_flask_api.timer
+
+ sudo systemctl restart apintio_flask_api.service
+ sudo systemctl restart apintio_flask_api.timer
+
+
+ sudo systemctl list-timers | grep apintio_flask_api
+"""
+
 import socket
 import struct
 from flask import Flask, jsonify, request
@@ -25,9 +84,16 @@ import secrets
 from eth_account.messages import encode_defunct
 import uuid
 from apscheduler.schedulers.background import BackgroundScheduler
+from tzlocal import get_localzone
+
+from flask_cors import CORS  # Import the CORS class
+from flask import Flask, jsonify
 
 
 app = Flask(__name__)
+# Enable CORS for all routes and all origins (allow access from any domain)
+CORS(app)
+
 
 time_between_authentification_change=10
 double_authentification_int_current=""
@@ -233,8 +299,8 @@ def change_oauth_id():
     double_authentification_int_current = uuid.uuid4()
     print("Oauth2: ", double_authentification_int_current, double_authentification_int_previous)
     
-
-scheduler = BackgroundScheduler()
+# Set the time zone manually
+scheduler = BackgroundScheduler(timezone="Europe/London")  # or "Europe/Brussels"
 scheduler.add_job(func=change_oauth_id, trigger="interval", seconds=time_between_authentification_change)
 scheduler.start()
 
@@ -260,7 +326,8 @@ def is_message_signed_from_clipboard_text(given_message):
     message|address|signature
     """
     split_message = given_message.split("|")
-    if len(split_message) < 3:
+    lenght = len(split_message)
+    if not(lenght ==3 or lenght == 5):
         return False
     message = split_message[0]
     address = split_message[1]
@@ -294,7 +361,39 @@ def is_message_start_with_current_previous_server_auth_id( message):
 # Sample route
 @app.route('/')
 def home():
-    return "Welcome to the Raspberry Pi REST API!"
+    return """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Int 🍺.io</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00FF00;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        a {
+            color: #00AA00;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #00CC00;
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>API Int 🍺.io</h1>
+    <p>Welcome to the Raspberry Pi REST API </p>
+    <p>Documentation here: <a href="https://github.com/EloiStree/apint.io/tree/main/flask">https://github.com/EloiStree/apint.io/tree/main/flask</a></p>
+    
+    
+</body>
+</html>
+"""
 
 # Get endpoint
 @app.route('/api/create_metamask_wallet', methods=['GET'])
@@ -378,6 +477,7 @@ def push_server_auth_signed_command():
     """
     data = request.get_json()
     message = data.get('message')
+    print (f"Message: {message}")
     
     if  len(message) > authorized_size_of_message:
         response_data = {
@@ -407,12 +507,36 @@ def push_server_auth_signed_command():
             """
         }
         return jsonify(response_data)
+    
     split_message = message.split("|")
-    relay_message_to_interpretor(split_message[0], split_message[1])
-    response_data = {
-        "ok": "Message Relayed"
-    }
-    return jsonify(response_data)
+    split_message_length = len(split_message)
+    address= split_message[1]
+    to_interpret = split_message[0]
+    to_interpret = to_interpret.replace(str(double_authentification_int_current), "")
+    to_interpret = to_interpret.replace(str(double_authentification_int_previous), "")
+    
+    if split_message_length == 3:
+        relay_message_to_interpretor(to_interpret, address)
+        response_data = {
+            "ok": "Message relayed"
+        }
+        return jsonify(response_data)
+    if split_message_length == 5:    
+        master_address = split_message[3]
+        is_coaster_signed = is_message_signed_from_params(split_message[1], split_message[3], split_message[4])
+        if not is_coaster_signed:
+            response_data = {
+                "error": """
+                The coaster message must be signed by the coaster public address.
+                """
+            }
+            return jsonify(response_data)
+        
+        relay_message_to_interpretor(to_interpret, master_address)
+        response_data = {
+            "ok": "Coasted message relayed"
+        }
+        return jsonify(response_data)
 
 # API END
 if __name__ == '__main__':
