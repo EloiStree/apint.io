@@ -7,7 +7,10 @@
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script>
-    async function signMessage(privateKey, message_to_sign) {
+    
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        async function signMessage(privateKey, message_to_sign) {
         try {
             if (!privateKey || !message_to_sign) {
                 document.getElementById('error').textContent = "Invalid format. Expected format is: ?q=<privateKey>|<MessageToSign>";
@@ -24,11 +27,7 @@
             return "";
         }
     }
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-
         const serverIp = 'http://193.150.14.47';
-    
         //refresh page
         
 
@@ -119,7 +118,7 @@
     }
 
     function fetchServerAuthId() {
-        fetch('http://193.150.14.47/api/get_server_auth_id')
+        fetch(serverIp + '/api/get_server_auth_id')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('SERVER_AUTH').value = data.auth;
