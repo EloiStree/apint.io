@@ -551,6 +551,6 @@ if __name__ == '__main__':
         #integer_debugger_ipv4 = ip_of_ddns
         print(f"Integer debugger ip: {integer_debugger_ipv4}")
     
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=8081)
     
     
