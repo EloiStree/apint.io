@@ -1,3 +1,9 @@
+Linked In if you need to contact me:    
+https://www.linkedin.com/in/eloistree/  
+
+
+-------------------
+
 IID & 🍺.io: https://buymeacoffee.com/apintio - https://github.com/EloiStree/IID - https://github.com/EloiStree/apint.io
 
 --------------------------------------
