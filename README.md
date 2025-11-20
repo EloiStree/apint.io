@@ -27,6 +27,7 @@ Discord: https://discord.gg/ZAUkBUF8ak
 
 **Server**
 Pi Hosting Server: https://193.150.14.47 [https://apint.io](https://apint.io)  
+Pi Dev Hosting Server: https://193.150.14.6  
 Pi Hosted Server:[https://apint.ddns.net](https://apint.ddns.net)  
 Pi Home Server:[https://apint-home.ddns.net](https://apint-home.ddns.net)  
 
